@@ -1,5 +1,6 @@
-
+import java.util.Hashtable;
 import java.util.*;
+import java.util.Enumeration;
 
 /**
  * 
@@ -106,7 +107,50 @@ public class Jobs {
     //Méthodes pour créer un job
     
     public void createJob() {
-        
+    	Scanner sc = new Scanner(System.in);
+    	System.out.println("Entrer le job de votre personnage (warrior, thief, dragoon, monk):");
+    	String input= sc.next();
+        type = input;
+        setType(type);
+        System.out.println("Le job de votre personnage est: " + getType());
+        if (getType().equals("thief")) {
+        	wrist = "light";
+        	weapon = "Dagger, sword, double-sword and claws";
+        	armor = "light";
+        	setWeapon(weapon);
+        	setArmor(armor);
+        	setWrist(wrist);
+        	System.out.println("En tant que thief vos équipement disponible sont:\nweapon: " + getWeapon() + "\nwrist: " + wrist
+        	+ "\narmor: " + armor) ;
+        }else if (getType().equals("dragoon")) {
+        	wrist = "light, medium and heavy";
+        	weapon = "spear and 2Handed-sword";
+        	armor = "light, medium and heavy";
+        	setWeapon(weapon);
+        	setArmor(armor);
+        	setWrist(wrist);
+        	System.out.println("En tant que dragoon vos équipement disponible sont:\nweapon: " + getWeapon() + "\nwrist: " + wrist
+        	+ "\narmor: " + armor) ;
+        }else if (getType().equals("monk")) {
+        	wrist = "light and medium";
+        	weapon = "claws";
+        	armor = "light and medium";
+        	setWeapon(weapon);
+        	setArmor(armor);
+        	setWrist(wrist);
+        	System.out.println("En tant que monk vos équipement disponible sont:\nweapon: " + getWeapon() + "\nwrist: " + wrist
+        	+ "\narmor: " + armor) ;
+        }else if (getType().equals("warrior")) {
+        	wrist = "light, medium and heavy";
+        	weapon = "sword, spear and 2Handed-sword";
+        	armor = "light, medium and heavy";
+        	setWeapon(weapon);
+        	setArmor(armor);
+        	setWrist(wrist);
+        	System.out.println("En tant que warrior vos équipement disponible sont:\nweapon: " + getWeapon() + "\nwrist: " + wrist
+        	+ "\narmor: " + armor) ;
+        }
+          
     }
 
 }

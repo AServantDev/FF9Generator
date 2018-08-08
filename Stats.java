@@ -208,6 +208,17 @@ public class Stats {
 	    		System.out.println("Les statistiques du "+ charac.job.getType()+" " + charac.getName() + " sont :\nspeed: " 
 	    	    + charac.job.stat1.getSpeed() +"\nstrength: " + charac.job.stat1.getStrength() + "\nmagic: " + charac.job.stat1.getMagic() + "\nspirit: " + charac.job.stat1.getSpirit() + "\nevade: " 
 	    	    + charac.job.stat1.getEvade());
+	    		
+	    	}else if (job.getType().equals("warrior")) {
+	    		speed = (int) (Math.random() * (8 - 5) +5);
+	    		strength = (int) (Math.random() * (18 - 8)+8);
+	    		magic = (int) (Math.random() * (8 - 5)+5);
+	    		spirit = (int) (Math.random() * (10 - 5)+5);
+	    		evade = (charac.job.stat1.getSpeed() * charac.job.stat1.getLvl());
+	    		
+	    		System.out.println("Les statistiques du "+ charac.job.getType()+" " + charac.getName() + " sont :\nspeed: " 
+	    	    + charac.job.stat1.getSpeed() +"\nstrength: " + charac.job.stat1.getStrength() + "\nmagic: " + charac.job.stat1.getMagic() + "\nspirit: " + charac.job.stat1.getSpirit() + "\nevade: " 
+	    	    + charac.job.stat1.getEvade());
 	    	}
 	    	
 	    }
