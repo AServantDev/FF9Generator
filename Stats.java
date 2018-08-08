@@ -219,6 +219,72 @@ public class Stats {
 	    		System.out.println("Les statistiques du "+ charac.job.getType()+" " + charac.getName() + " sont :\nspeed: " 
 	    	    + charac.job.stat1.getSpeed() +"\nstrength: " + charac.job.stat1.getStrength() + "\nmagic: " + charac.job.stat1.getMagic() + "\nspirit: " + charac.job.stat1.getSpirit() + "\nevade: " 
 	    	    + charac.job.stat1.getEvade());
+	    	}else if(job.getType().equals("paladin")) {
+	    		speed = (int) (Math.random() * (8 - 5) + 5);
+	    		strength = (int) (Math.random() * (18 - 8)+ 8);
+	    		magic = (int) (Math.random() * (9 - 5)+ 5);
+	    		spirit = (int) (Math.random() * (13 - 6)+6);
+	    		evade = (charac.job.stat1.getSpeed() * charac.job.stat1.getLvl());
+	    		
+	    		System.out.println("Les statistiques du "+ charac.job.getType()+" " + charac.getName() + " sont :\nspeed: " 
+	    	    + charac.job.stat1.getSpeed() +"\nstrength: " + charac.job.stat1.getStrength() + "\nmagic: " + charac.job.stat1.getMagic() + "\nspirit: " + charac.job.stat1.getSpirit() + "\nevade: " 
+	    	    + charac.job.stat1.getEvade());
+	    		
+	    	}else if(job.getType().equals("white mage")) {
+	    		speed = (int) (Math.random() * (10 - 7) + 7);
+	    		strength = (int) (Math.random() * (7 - 5)+ 5);
+	    		magic = (int) (Math.random() * (10 - 5)+ 5);
+	    		spirit = (int) (Math.random() * (18 - 10)+10);
+	    		evade = (charac.job.stat1.getSpeed() * charac.job.stat1.getLvl());
+	    		
+	    		System.out.println("Les statistiques du "+ charac.job.getType()+" " + charac.getName() + " sont :\nspeed: " 
+	    	    + charac.job.stat1.getSpeed() +"\nstrength: " + charac.job.stat1.getStrength() + "\nmagic: " + charac.job.stat1.getMagic() + "\nspirit: " + charac.job.stat1.getSpirit() + "\nevade: " 
+	    	    + charac.job.stat1.getEvade());
+	    		
+	    	}else if(job.getType().equals("red mage")) {
+	    		speed = (int) (Math.random() * (10 - 6) + 6);
+	    		strength = (int) (Math.random() * (12 - 7)+ 7);
+	    		magic = (int) (Math.random() * (12 - 7)+ 7);
+	    		spirit = (int) (Math.random() * (12 - 7)+ 7);
+	    		evade = (charac.job.stat1.getSpeed() * charac.job.stat1.getLvl());
+	    		
+	    		System.out.println("Les statistiques du "+ charac.job.getType()+" " + charac.getName() + " sont :\nspeed: " 
+	    	    + charac.job.stat1.getSpeed() +"\nstrength: " + charac.job.stat1.getStrength() + "\nmagic: " + charac.job.stat1.getMagic() + "\nspirit: " + charac.job.stat1.getSpirit() + "\nevade: " 
+	    	    + charac.job.stat1.getEvade());
+	    		
+	    	}else if(job.getType().equals("black mage")) {
+	    		speed = (int) (Math.random() * (10 - 6) + 6);
+	    		strength = (int) (Math.random() * (7 - 5)+ 5);
+	    		magic = (int) (Math.random() * (18 - 10)+ 10);
+	    		spirit = (int) (Math.random() * (10 - 7)+ 7);
+	    		evade = (charac.job.stat1.getSpeed() * charac.job.stat1.getLvl());
+	    		
+	    		System.out.println("Les statistiques du "+ charac.job.getType()+" " + charac.getName() + " sont :\nspeed: " 
+	    	    + charac.job.stat1.getSpeed() +"\nstrength: " + charac.job.stat1.getStrength() + "\nmagic: " + charac.job.stat1.getMagic() + "\nspirit: " + charac.job.stat1.getSpirit() + "\nevade: " 
+	    	    + charac.job.stat1.getEvade());
+	    		
+	    	}else if(job.getType().equals("blue mage")) {
+	    		speed = (int) (Math.random() * (10 - 6) + 6);
+	    		strength = (int) (Math.random() * (10 - 6)+ 6);
+	    		magic = (int) (Math.random() * (15 - 8)+ 8);
+	    		spirit = (int) (Math.random() * (12 - 7)+ 7);
+	    		evade = (charac.job.stat1.getSpeed() * charac.job.stat1.getLvl());
+	    		
+	    		System.out.println("Les statistiques du "+ charac.job.getType()+" " + charac.getName() + " sont :\nspeed: " 
+	    	    + charac.job.stat1.getSpeed() +"\nstrength: " + charac.job.stat1.getStrength() + "\nmagic: " + charac.job.stat1.getMagic() + "\nspirit: " + charac.job.stat1.getSpirit() + "\nevade: " 
+	    	    + charac.job.stat1.getEvade());
+	    		
+	    	}else if(job.getType().equals("invokeur")) {
+	    		speed = (int) (Math.random() * (12 - 6) + 6);
+	    		strength = (int) (Math.random() * (7 - 5)+ 5);
+	    		magic = (int) (Math.random() * (15 - 8)+ 8);
+	    		spirit = (int) (Math.random() * (15 - 8)+ 8);
+	    		evade = (charac.job.stat1.getSpeed() * charac.job.stat1.getLvl());
+	    		
+	    		System.out.println("Les statistiques du "+ charac.job.getType()+" " + charac.getName() + " sont :\nspeed: " 
+	    	    + charac.job.stat1.getSpeed() +"\nstrength: " + charac.job.stat1.getStrength() + "\nmagic: " + charac.job.stat1.getMagic() + "\nspirit: " + charac.job.stat1.getSpirit() + "\nevade: " 
+	    	    + charac.job.stat1.getEvade());
+	    		
 	    	}
 	    	
 	    }

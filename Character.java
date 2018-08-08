@@ -1,4 +1,3 @@
-import java.util.Scanner;
 import java.util.*;
 
 /**
@@ -7,6 +6,9 @@ import java.util.*;
 public class Character {
 	
 	Jobs job = new Jobs();
+	
+	Enumeration names;
+	int key;
 	
 
     /**
@@ -101,22 +103,44 @@ public class Character {
 	
 	//Méthodes
 	
-    public void creerPerso() {
+    public void creerPerso() throws InterruptedException {
     	Scanner sc = new Scanner(System.in);
     	System.out.println("Entrer le nom de votre personnage :");
     	String input= sc.next();
         name = input;
         setName(name);
         System.out.println("Entrer sa ville de naissance: ");
-        String input2 = sc.next();
-        hometown = input2;
+
+		Hashtable <Integer, String> cities = new Hashtable <Integer,String>();
+    	cities.put(1, "Lindblum");
+    	cities.put(2, "Tréno");
+    	cities.put(3, "Alexandria");
+    	cities.put(4, "Burmecia");
+    	cities.put(5, "Daguerro");
+    	cities.put(6, "Zerin");
+    	cities.put(7, "Celes");
+    	cities.put(8, "Dali");
+    	cities.put(9, "Madahine-Salee");
+    	cities.put(10, "Gaza Est");
+    	
+    	names = cities.keys();
+    	while(names.hasMoreElements()) {
+    	      key = (int) names.nextElement();
+    	      System.out.println(key+ " - Ville: " +
+    	      cities.get(key));
+    	   }
+    	
+        int input2 = sc.nextInt();
+        hometown = cities.get(input2);
+        
         setHometown(hometown);
-        System.out.println("Entrer son age: ");
+        System.out.println("Entrer son age (chiffre entier): ");
         int input3 = sc.nextInt();
         age = input3;
         setAge(input3);
         System.out.println("Entrer son rang social:\n1- Pauvre\n2- Citoyen\n3- Aisé\n4- Riche");
         int input4 = sc.nextInt();
+        
         if(input4 == 1) {
         	socialRank = "Pauvre";
         	setSocialRank(socialRank);
@@ -135,11 +159,13 @@ public class Character {
         }else if (input4 == 4) {
         	socialRank = "Riche";
         	setSocialRank(socialRank);
-        	money = (int) (Math.random() * ((1000 - 600)+600) );
+        	money = (int) (Math.random() * (1000 - 600) +600 );
         	setMoney(money);
         }
-        System.out.println(getName()+ " est né(é) à " + getHometown() + " en " + (1000 - getAge()) + ".\nIl appartient au rang social des "
+        System.out.println("");
+        System.out.println(getName()+ " est né à " + getHometown() + " en " + (1000 - getAge()) + ".\nIl appartient au rang social des "
         + getSocialRank() + " et possède " + getMoney()+ " gils.");
+        Thread.sleep(2000);
        
         
     }

@@ -18,6 +18,9 @@ public class Jobs {
     
     // déclarations des variables
     
+    Enumeration names;
+	int key;
+    
     /**
      * 
      */
@@ -99,6 +102,7 @@ public class Jobs {
     public String skills;
 
     /**
+     * @throws InterruptedException 
      * 
      */
     
@@ -106,13 +110,35 @@ public class Jobs {
     
     //Méthodes pour créer un job
     
-    public void createJob() {
+    public void createJob() throws InterruptedException {
     	Scanner sc = new Scanner(System.in);
-    	System.out.println("Entrer le job de votre personnage (warrior, thief, dragoon, monk):");
-    	String input= sc.next();
-        type = input;
+    	System.out.println("Entrer le job de votre personnage:");
+    	
+    	Hashtable <Integer, String> jobs = new Hashtable <Integer,String>();
+    	jobs.put(1, "warrior");
+    	jobs.put(2, "thief");
+    	jobs.put(3, "dragoon");
+    	jobs.put(4, "monk");
+    	jobs.put(5, "paladin");
+    	jobs.put(6, "white mage");
+    	jobs.put(7, "red mage");
+    	jobs.put(8, "black mage");
+    	jobs.put(9, "blue mage");
+    	jobs.put(10, "invokeur");
+    	
+    	names = jobs.keys();
+    	while(names.hasMoreElements()) {
+    	      key = (int) names.nextElement();
+    	      System.out.println(key+ " - Job: " +
+    	      jobs.get(key));
+    	   }
+    	
+    	int input= sc.nextInt();
+        type = jobs.get(input);
         setType(type);
+        
         System.out.println("Le job de votre personnage est: " + getType());
+        Thread.sleep(2000);
         if (getType().equals("thief")) {
         	wrist = "light";
         	weapon = "Dagger, sword, double-sword and claws";
@@ -148,6 +174,60 @@ public class Jobs {
         	setArmor(armor);
         	setWrist(wrist);
         	System.out.println("En tant que warrior vos équipement disponible sont:\nweapon: " + getWeapon() + "\nwrist: " + wrist
+        	+ "\narmor: " + armor) ;
+        }else if (getType().equals("blue mage")) {
+        	wrist = "light";
+        	weapon = "dagger, fork";
+        	armor = "light";
+        	setWeapon(weapon);
+        	setArmor(armor);
+        	setWrist(wrist);
+        	System.out.println("En tant que blue mage vos équipement disponible sont:\nweapon: " + getWeapon() + "\nwrist: " + wrist
+        	+ "\narmor: " + armor) ;
+        }else if (getType().equals("white mage")) {
+        	wrist = "light";
+        	weapon = "scepter, dagger";
+        	armor = "light";
+        	setWeapon(weapon);
+        	setArmor(armor);
+        	setWrist(wrist);
+        	System.out.println("En tant que white mage vos équipement disponible sont:\nweapon: " + getWeapon() + "\nwrist: " + wrist
+        	+ "\narmor: " + armor) ;
+        }else if (getType().equals("black mage")) {
+        	wrist = "light";
+        	weapon = "staff, dagger";
+        	armor = "light, medium and heavy";
+        	setWeapon(weapon);
+        	setArmor(armor);
+        	setWrist(wrist);
+        	System.out.println("En tant que black mage vos équipement disponible sont:\nweapon: " + getWeapon() + "\nwrist: " + wrist
+        	+ "\narmor: " + armor) ;
+        }else if (getType().equals("red mage")) {
+        	wrist = "light";
+        	weapon = "sword, staff, scepter";
+        	armor = "light";
+        	setWeapon(weapon);
+        	setArmor(armor);
+        	setWrist(wrist);
+        	System.out.println("En tant que red mage vos équipement disponible sont:\nweapon: " + getWeapon() + "\nwrist: " + wrist
+        	+ "\narmor: " + armor) ;
+        }else if (getType().equals("paladin")) {
+        	wrist = "light, medium and heavy";
+        	weapon = "sword, 2Handed-sword and scepter";
+        	armor = "light, medium and heavy";
+        	setWeapon(weapon);
+        	setArmor(armor);
+        	setWrist(wrist);
+        	System.out.println("En tant que paladin vos équipement disponible sont:\nweapon: " + getWeapon() + "\nwrist: " + wrist
+        	+ "\narmor: " + armor) ;
+        }else if (getType().equals("invokeur")) {
+        	wrist = "light";
+        	weapon = "scepter and instrument";
+        	armor = "light";
+        	setWeapon(weapon);
+        	setArmor(armor);
+        	setWrist(wrist);
+        	System.out.println("En tant que invokeur vos équipement disponible sont:\nweapon: " + getWeapon() + "\nwrist: " + wrist
         	+ "\narmor: " + armor) ;
         }
           
