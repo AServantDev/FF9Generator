@@ -11,6 +11,9 @@ public class Races {
      */
     public Races() {
     }
+    
+    Enumeration names;
+	int key;
 
     /**
      * 
@@ -55,7 +58,26 @@ public class Races {
      * 
      */
     public void createRace() {
-        // TODO implement here
+    	Scanner sc = new Scanner(System.in);
+    	System.out.println("Entrer la race de votre personnage :");
+    	Hashtable <Integer, String> races = new Hashtable <Integer,String>();
+    	races.put(1, "genom");
+    	races.put(2, "human");
+    	races.put(3, "rat");
+    	races.put(4, "kwe");
+    	races.put(5, "invokeur");
+    	races.put(6, "black mage");
+    	
+    	names = races.keys();
+    	while(names.hasMoreElements()) {
+    	      key = (int) names.nextElement();
+    	      System.out.println(key+ " - Race: " +
+    	      races.get(key));
+    	   }
+    	
+    	int input = sc.nextInt();
+       type = races.get(input);
+       setType(type);
     }
 
 }

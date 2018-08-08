@@ -120,7 +120,8 @@ public class Character {
         name = input;
         setName(name);
         
-        System.out.println("Entrer la race de votre personnage :");
+        job.race.createRace();
+        /*System.out.println("Entrer la race de votre personnage :");
         
         Hashtable <Integer, String> races = new Hashtable <Integer,String>();
     	races.put(1, "genom");
@@ -140,7 +141,7 @@ public class Character {
     	int input5 = sc.nextInt();
         race = races.get(input5);
         
-        setRace(race);
+        setRace(race);*/
     	
         System.out.println("Entrer sa ville de naissance: ");
 
@@ -197,7 +198,7 @@ public class Character {
         	setMoney(money);
         }
         System.out.println("");
-        System.out.println(getName()+ " le " +getRace()+ " est né à " + getHometown() + " en " + (1000 - getAge()) + ".\nIl appartient au rang social des "
+        System.out.println(getName()+ " le " +job.race.getType()+ " est né à " + getHometown() + " en " + (1000 - getAge()) + ".\nIl appartient au rang social des "
         + getSocialRank() + " et possède " + getMoney()+ " gils.");
         Thread.sleep(2000);
        

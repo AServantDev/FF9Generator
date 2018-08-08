@@ -9,6 +9,7 @@ public class Jobs {
 
 	
 	Stats stat1 = new Stats();
+	Races race = new Races();
     /**
      * Default constructor
      */
@@ -110,21 +111,20 @@ public class Jobs {
     
     //Méthodes pour créer un job
     
-    public void createJob(Character charac) throws InterruptedException {
+    public void createJob() throws InterruptedException {
     	Scanner sc = new Scanner(System.in);
     	System.out.println("Entrer le job de votre personnage:");
     	
     	
     	
     	
-    	if (charac.getRace() == "genom") {
+    	if (race.getType() == "genom") {
     		
     		Hashtable <Integer, String> jobs = new Hashtable <Integer,String>();
         	
         	jobs.put(1, "thief");
         	jobs.put(2, "dragoon");
         	jobs.put(3, "monk");
-        	
         	jobs.put(4, "white mage");
         	jobs.put(5, "red mage");
         	jobs.put(6, "black mage");
@@ -141,7 +141,7 @@ public class Jobs {
         	int input= sc.nextInt();
             type = jobs.get(input);
             setType(type);
-    	}else if(charac.getRace() == "human") {
+    	}else if(race.getType() == "human") {
     		
     		Hashtable <Integer, String> jobs = new Hashtable <Integer,String>();
         	
@@ -163,7 +163,7 @@ public class Jobs {
         	int input= sc.nextInt();
             type = jobs.get(input);
             setType(type);
-       }else if(charac.getRace() == "rat") {
+       }else if(race.getType() == "rat") {
         		
         		Hashtable <Integer, String> jobs = new Hashtable <Integer,String>();
             	
@@ -181,7 +181,7 @@ public class Jobs {
             	int input= sc.nextInt();
                 type = jobs.get(input);
                 setType(type);
-           }else if(charac.getRace() == "kwe") {
+           }else if(race.getType() == "kwe") {
        		
        		Hashtable <Integer, String> jobs = new Hashtable <Integer,String>();
            	
@@ -201,7 +201,7 @@ public class Jobs {
            	int input= sc.nextInt();
                type = jobs.get(input);
                setType(type);
-          }else if(charac.getRace() == "invokeur") {
+          }else if(race.getType() == "invokeur") {
          		
          		Hashtable <Integer, String> jobs = new Hashtable <Integer,String>();
            
@@ -220,7 +220,7 @@ public class Jobs {
              	int input= sc.nextInt();
                  type = jobs.get(input);
                  setType(type);
-            }else if(charac.getRace() == "black mage") {
+            }else if(race.getType() == "black mage") {
          		
          		Hashtable <Integer, String> jobs = new Hashtable <Integer,String>();
            

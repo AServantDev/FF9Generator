@@ -30,7 +30,8 @@ public class Application {
     	
     	char1.creerPerso();
     	
-    	char1.job.createJob(char1);
+    	
+    	char1.job.createJob();
     	char1.job.stat1.createStats(char1.job, char1);
     	
     	
