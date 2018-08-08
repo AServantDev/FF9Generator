@@ -110,32 +110,137 @@ public class Jobs {
     
     //Méthodes pour créer un job
     
-    public void createJob() throws InterruptedException {
+    public void createJob(Character charac) throws InterruptedException {
     	Scanner sc = new Scanner(System.in);
     	System.out.println("Entrer le job de votre personnage:");
     	
-    	Hashtable <Integer, String> jobs = new Hashtable <Integer,String>();
-    	jobs.put(1, "warrior");
-    	jobs.put(2, "thief");
-    	jobs.put(3, "dragoon");
-    	jobs.put(4, "monk");
-    	jobs.put(5, "paladin");
-    	jobs.put(6, "white mage");
-    	jobs.put(7, "red mage");
-    	jobs.put(8, "black mage");
-    	jobs.put(9, "blue mage");
-    	jobs.put(10, "invokeur");
     	
-    	names = jobs.keys();
-    	while(names.hasMoreElements()) {
-    	      key = (int) names.nextElement();
-    	      System.out.println(key+ " - Job: " +
-    	      jobs.get(key));
-    	   }
     	
-    	int input= sc.nextInt();
-        type = jobs.get(input);
-        setType(type);
+    	
+    	if (charac.getRace() == "genom") {
+    		
+    		Hashtable <Integer, String> jobs = new Hashtable <Integer,String>();
+        	
+        	jobs.put(1, "thief");
+        	jobs.put(2, "dragoon");
+        	jobs.put(3, "monk");
+        	
+        	jobs.put(4, "white mage");
+        	jobs.put(5, "red mage");
+        	jobs.put(6, "black mage");
+        	jobs.put(7, "blue mage");
+        	
+    		
+    		
+    		names = jobs.keys();
+        	while(names.hasMoreElements()) {
+        	      key = (int) names.nextElement();
+        	      System.out.println(key+ " - Job: " +
+        	      jobs.get(key));
+        	   }
+        	int input= sc.nextInt();
+            type = jobs.get(input);
+            setType(type);
+    	}else if(charac.getRace() == "human") {
+    		
+    		Hashtable <Integer, String> jobs = new Hashtable <Integer,String>();
+        	
+    		jobs.put(1, "warrior");
+        	jobs.put(2, "thief");
+        	jobs.put(3, "monk");
+        	jobs.put(4, "paladin");
+        	jobs.put(5, "white mage");
+        	jobs.put(6, "red mage");
+        	jobs.put(7, "black mage");
+        	
+        	
+    		names = jobs.keys();
+        	while(names.hasMoreElements()) {
+        	      key = (int) names.nextElement();
+        	      System.out.println(key+ " - Job: " +
+        	      jobs.get(key));
+        	   }
+        	int input= sc.nextInt();
+            type = jobs.get(input);
+            setType(type);
+       }else if(charac.getRace() == "rat") {
+        		
+        		Hashtable <Integer, String> jobs = new Hashtable <Integer,String>();
+            	
+        		jobs.put(1, "warrior");
+            	jobs.put(2, "thief");
+            	jobs.put(3, "dragoon");
+            	jobs.put(4, "monk");
+            	
+        		names = jobs.keys();
+            	while(names.hasMoreElements()) {
+            	      key = (int) names.nextElement();
+            	      System.out.println(key+ " - Job: " +
+            	      jobs.get(key));
+            	   }
+            	int input= sc.nextInt();
+                type = jobs.get(input);
+                setType(type);
+           }else if(charac.getRace() == "kwe") {
+       		
+       		Hashtable <Integer, String> jobs = new Hashtable <Integer,String>();
+           	
+       		jobs.put(1, "warrior");
+        	jobs.put(2, "monk");
+        	jobs.put(3, "white mage");
+        	jobs.put(4, "black mage");
+        	jobs.put(5, "blue mage");
+        	
+           	
+       		names = jobs.keys();
+           	while(names.hasMoreElements()) {
+           	      key = (int) names.nextElement();
+           	      System.out.println(key+ " - Job: " +
+           	      jobs.get(key));
+           	   }
+           	int input= sc.nextInt();
+               type = jobs.get(input);
+               setType(type);
+          }else if(charac.getRace() == "invokeur") {
+         		
+         		Hashtable <Integer, String> jobs = new Hashtable <Integer,String>();
+           
+            	jobs.put(1, "white mage");
+            	jobs.put(2, "red mage");
+            	jobs.put(3, "black mage");
+            	jobs.put(4, "invokeur");
+          	
+             	
+         		names = jobs.keys();
+             	while(names.hasMoreElements()) {
+             	      key = (int) names.nextElement();
+             	      System.out.println(key+ " - Job: " +
+             	      jobs.get(key));
+             	   }
+             	int input= sc.nextInt();
+                 type = jobs.get(input);
+                 setType(type);
+            }else if(charac.getRace() == "black mage") {
+         		
+         		Hashtable <Integer, String> jobs = new Hashtable <Integer,String>();
+           
+            	jobs.put(1, "white mage");
+            	jobs.put(2, "red mage");
+            	jobs.put(3, "black mage");
+            	jobs.put(4, "blue mage");
+          	
+             	
+         		names = jobs.keys();
+             	while(names.hasMoreElements()) {
+             	      key = (int) names.nextElement();
+             	      System.out.println(key+ " - Job: " +
+             	      jobs.get(key));
+             	   }
+             	int input= sc.nextInt();
+                 type = jobs.get(input);
+                 setType(type);
+            }
+    	
         
         System.out.println("Le job de votre personnage est: " + getType());
         Thread.sleep(2000);
